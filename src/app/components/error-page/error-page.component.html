@@ -1,0 +1,35 @@
+<div class="wrapper" role="main" aria-labelledby="page-title">
+  <div class="ring" aria-hidden="true"></div>
+
+  <header>
+    <span class="badge">ERROR PAGE</span>
+    <span class="badge">{{ errorCode >= 500 ? 'SERVER' : 'CLIENT' }}</span>
+  </header>
+
+  <main>
+    <section class="content">
+      <div class="code">{{ errorCode }}</div>
+      <h1 id="page-title">{{ title }}</h1>
+      <p class="lead">{{ description }}</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" routerLink="/">Go Home</a>
+        <button class="btn btn-ghost" type="button" (click)="goBack()">Go Back</button>
+        <button class="btn btn-ghost" type="button" (click)="reload()">Try Again</button>
+      </div>
+    </section>
+
+    <section class="visual" aria-hidden="true">
+      <div class="orbit">
+        <div class="planet"></div>
+        <div class="planet"></div>
+        <div class="planet"></div>
+        <div class="planet"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Tip: You can reuse this for <strong>500</strong>, <strong>403</strong>, etc.</span>
+  </footer>
+</div>
