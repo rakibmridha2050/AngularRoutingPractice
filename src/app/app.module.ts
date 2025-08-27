@@ -12,6 +12,10 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { ReviewComponent } from './components/review/review.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,11 +28,15 @@ import { FooterComponent } from './components/footer/footer.component';
     ErrorPageComponent,
     ReviewComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,9 +7,13 @@ import { ShopComponent } from './components/shop/shop.component';
 import { ShopSingleComponent } from './components/shop-single/shop-single.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ReviewComponent } from './components/review/review.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: '',redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignUpComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contract', component: ContractComponent },
